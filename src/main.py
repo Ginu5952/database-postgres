@@ -88,10 +88,10 @@ def get_columns_to_update() -> tuple[str, str]:
 def create_new_csv():
 
     import csv
-
-    with open('/home/dci-student/Downloads/MOCK_DATA.csv','r') as source:
+    
+    with open('/home/dci-student/Desktop/DCI/DataBase/employee/MOCK_DATA.csv','r') as source:
         source_reader = csv.reader(source)
-        with open('/home/dci-student/Downloads/MOCK_DATA_copy.csv','w') as dest:
+        with open('/home/dci-student/Desktop/DCI/DataBase/employee/MOCK_DATA_COPY.csv','w') as dest:
             dest_writer = csv.writer(dest)
             for row in source_reader:
                 new_row = row[1:]
