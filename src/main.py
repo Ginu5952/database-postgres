@@ -18,27 +18,27 @@ def main():
     print(employee)
 
     # insert r-required o-optional
-   # data = []
-   # for field, state in [
-   #     ("first_name", "r"),
-    #    ("last_name", "o"),
-    #    ("email","r"),
-    #    ("gender","o"),
-    #    ("salary","o")
-   # ]:
-       # input_data = input(f"{field} {'{Default None}' if state == 'o' else ''}")
-      #  if len(input_data) == 0 and state == 'o':
-      #      input_data = None
-      #  data.append(input_data)   
+    data = []
+    for field, state in [
+        ("first_name", "r"),
+        ("last_name", "o"),
+        ("email","r"),
+        ("gender","o"),
+        ("salary","o")
+    ]:
+        input_data = input(f"{field} {'{Default None}' if state == 'o' else ''}")
+        if len(input_data) == 0 and state == 'o':
+            input_data = None
+        data.append(input_data)   
 
-   # result = insert_data(data)
-   # print(result)   
-   # output = update_values()
-   # update_data(output)
+    result = insert_data(data)
+    print(result)   
+    output = update_values()
+    update_data(output)
 
     
-   # old, new = get_columns_to_update()
-   # update_column_name(old,new)
+    old, new = get_columns_to_update()
+    update_column_name(old,new)
     
     id = delete_row()
     delete_row_by_id(id)
@@ -105,8 +105,6 @@ def delete_row() -> int:
         print("Invalid input. Please enter a valid integer.")
         return delete_row()
 
-
-# ALTER SEQUENCE company.employee_id_seq RESTART WITH 1;
 
 if __name__ == '__main__':
     main()    
